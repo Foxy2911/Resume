@@ -65,7 +65,7 @@
 .parallax {
 
     background-color: red;
-    background-image: url(/assets/images/main-background-1.jpg);
+    background-image: url(/www/assets/images/main-background-1.jpg);
 
     background-attachment: fixed;
     background-position: center;

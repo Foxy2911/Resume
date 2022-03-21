@@ -5,11 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="/assets/css/index-style.css" rel="stylesheet">
+        <link href="./assets/css/index-style.css" rel="stylesheet">
+
+
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
         <!--font awesome-->
         <link href="/assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <title>Hello, world!</title>
@@ -121,10 +122,10 @@
                     <div class="skillset-list-skill">
                         <p>
                             <span class="skillset-list-skill-title">Python3</span>
-                            <span class="skillset-list-skill-value">90%</span>
+                            <span class="skillset-list-skill-value">70%</span>
                         </p>
                         <div class="progress skillset-list-progress">
-                            <div class="skillset-list-progress-progresbar" style="width: 90%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="skillset-list-progress-progresbar" style="width: 70%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skillset-list-skill">
@@ -139,10 +140,19 @@
                     <div class="skillset-list-skill">
                         <p>
                             <span class="skillset-list-skill-title">JavaScript/NodeJS</span>
-                            <span class="skillset-list-skill-value">90%</span>
+                            <span class="skillset-list-skill-value">80%</span>
                         </p>
                         <div class="progress skillset-list-progress">
-                            <div class="skillset-list-progress-progresbar" style="width: 90%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="skillset-list-progress-progresbar" style="width: 80%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skillset-list-skill">
+                        <p>
+                            <span class="skillset-list-skill-title">PHP</span>
+                            <span class="skillset-list-skill-value">30%</span>
+                        </p>
+                        <div class="progress skillset-list-progress">
+                            <div class="skillset-list-progress-progresbar" style="width: 30%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -150,19 +160,28 @@
                     <div class="skillset-list-skill">
                         <p>
                             <span class="skillset-list-skill-title">C#</span>
-                            <span class="skillset-list-skill-value">90%</span>
+                            <span class="skillset-list-skill-value">70%</span>
                         </p>
                         <div class="progress skillset-list-progress">
-                            <div class="skillset-list-progress-progresbar" style="width: 90%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="skillset-list-progress-progresbar" style="width: 70%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skillset-list-skill">
                         <p>
                             <span class="skillset-list-skill-title">Java</span>
-                            <span class="skillset-list-skill-value">90%</span>
+                            <span class="skillset-list-skill-value">70%</span>
                         </p>
                         <div class="progress skillset-list-progress">
-                            <div class="skillset-list-progress-progresbar" style="width: 90%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="skillset-list-progress-progresbar" style="width: 70%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skillset-list-skill">
+                        <p>
+                            <span class="skillset-list-skill-title">MongoDB/MYSQL</span>
+                            <span class="skillset-list-skill-value">50%</span>
+                        </p>
+                        <div class="progress skillset-list-progress">
+                            <div class="skillset-list-progress-progresbar" style="width: 50%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -182,9 +201,9 @@
                         <div class="contact-list-info">
                            <dl class="contact-list">
                               <dt>Phone:</dt>
-                              <dd><a href="tel:17202959098">1 (720) 295-9098</a></dd>
+                              <dd><a href="tel:17202959098">+32 494 17 98 11</a></dd>
                               <dt>Email:</dt>
-                              <dd><a href="mailto:hello@kk.dev">hello@kk.dev</a></dd>
+                              <dd><a href="mailto:hello@kk.dev">anestis.christa@gmail.com</a></dd>
                            </dl>
                         </div>
                         <div class="contact-list-social">
@@ -201,13 +220,13 @@
                         <div class="contact-form">
                            <p class="contacts-form-title">Or just write me a message here_</p>
                            <form class="" method="post" action="submit" name="contactform" autocomplete="off">
-                                <input class="form-field js-field-name" type="text" name="name" placeholder="Your name" maxlength="64" required="">
-                                <input class="form-field js-field-email" type="email" name="email" placeholder="Your email address" maxlength="64" required="">
-                                <input class="form-field js-field-name" type="text" name="subject" placeholder="Subject" required="">
-                                <textarea class="form-field js-field-message" style="min-height: 220px;" placeholder="Your message..." name="message" required=""></textarea>
+                                <input class="form-field js-field-name" id="name" type="text" name="name" placeholder="Your name" maxlength="64" required="">
+                                <input class="form-field js-field-email" id="email" type="email" name="email" placeholder="Your email address" maxlength="64" required="">
+                                <input class="form-field js-field-name" id="subject" type="text" name="subject" placeholder="Subject" required="">
+                                <textarea class="form-field js-field-message" id="message" style="min-height: 220px;" placeholder="Your message..." name="message" required=""></textarea>
                                 <div class="h-captcha" data-sitekey="f85e0486-2594-4537-b26e-d0c6811f6068"><iframe src="https://newassets.hcaptcha.com/captcha/v1/f6912ef/static/hcaptcha-checkbox.html#id=0xc3ipl9jlv&amp;host=kk.dev&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=nl&amp;tplinks=on&amp;sitekey=f85e0486-2594-4537-b26e-d0c6811f6068&amp;theme=light" title="widget containing checkbox for hCaptcha security challenge" tabindex="0" frameborder="0" scrolling="no" data-hcaptcha-widget-id="0xc3ipl9jlv" data-hcaptcha-response="" style="width: 303px; height: 78px; overflow: hidden;"></iframe><textarea id="g-recaptcha-response-0xc3ipl9jlv" name="g-recaptcha-response" style="display: none;"></textarea><textarea id="h-captcha-response-0xc3ipl9jlv" name="h-captcha-response" style="display: none;" required=""></textarea></div>
                               </div>
-                              <button id="submitbtn" class="site-btn site-btn--form" type="submit" value="Send" style="cursor: pointer;">Send&nbsp;<i class="fa fa-send"></i></button>
+                              <button id="submitbtn" class="site-btn site-btn--form" type="submit" value="Send" style="cursor: pointer;" onclick="sendEmail()">Send&nbsp;<i class="fa fa-send"></i></button>
                            </form>
                         </div>
                     </div>
@@ -221,8 +240,10 @@
             <p>test</p>
         </section>
 
-        <script src="/assets/js/age-calculator.js"></script>
-
+        <script src="./assets/js/age-calculator.js"></script>
+        <script src="./assets/js/mail.js"></script>
+        <!--SMTPJS library-->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>  
         <!-- Separate Popper and Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
