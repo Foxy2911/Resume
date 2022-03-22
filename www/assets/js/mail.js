@@ -1,13 +1,16 @@
 function sendEmail() {
     
     //get credentials
-    let name = document.getElementById("name");
-    let email = document.getElementById("email");
-    let subject = document.getElementById("subject");
-    let body = document.getElementById("message")
+    let name = document.getElementById("name").value;
+    //let email = document.getElementById("email").value;
+    let email = "anestis.christa@gmail.com"
+    let subject = document.getElementById("subject").value;
+    let body = document.getElementById("message").value;
 
-    body += "Best wishes" + name
-    let mailto = $`mailto:${email}?subject=${subject}&body=${body}`
+    let newline = "%0D%0A"
 
-    window.location.href = mailto;
+    body += newline + newline +"Best wishes," + newline + name
+    let mailto = `mailto:${email}?subject=${subject}&body=${body}`
+
+    window.open(mailto, '_self');
 }
