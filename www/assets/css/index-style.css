@@ -18,6 +18,14 @@
     color: white;
 }
 
+.about-me {
+    border-radius: 10px;
+}
+
+.center {
+    justify-content: center;
+}
+
 .d-flex {
     font-size: x-large;
     justify-content: space-evenly;
@@ -52,14 +60,13 @@
 }
 
 .background-image {
-/*
+
     z-index: -99;
     position: absolute;
     top: 0;
-    min-width: 100vw;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-*/
+
 }
 
 .parallax {
@@ -88,13 +95,11 @@
 }
 
 .section {
-    min-width: 100vw;
-    padding-left: 25% !important;
-    padding-right: 25% !important;
+    min-width: 10vw;
     background-color: white;
     max-width: 100vw;
 
-    padding-top: 80px;
+    padding-top: 134px;
     padding-bottom: 60px;
 }
 
