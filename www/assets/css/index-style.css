@@ -105,8 +105,12 @@ a {
     background-color: white;
     max-width: 100vw;
 
-    padding-top: 134px;
+    padding-top: 65px;
     padding-bottom: 60px;
+}
+
+.section-top {
+    
 }
 
 .section-title {
@@ -127,7 +131,7 @@ a {
 
 hr {
     border: none !important;
-    height: 50px !important;
+    height: 119px !important;
     background-color: unset !important;
 }
 
