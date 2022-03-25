@@ -18,6 +18,12 @@
     color: white;
 }
 
+a {
+    /* overwrite bootstrap css */
+    color: white !important;
+    text-decoration: none !important;
+}
+
 .about-me {
     border-radius: 10px;
 }
