@@ -55,7 +55,7 @@ a {
 .personal-profile-social a {
     color: white;
     margin-right: 50px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .personal-profile img {
@@ -92,7 +92,7 @@ a {
 }
 
 .contact-list dd {
-    padding-left: 100px;
+    padding-left: 65px;
 }
 
 .contact-list dd a {
@@ -288,6 +288,11 @@ hr {
     font-size: 16px;
     line-height: 24px;
     font-family: Roboto Mono,monospace;
+}
+
+footer section p {
+    text-align: center;   
+    margin: 10px auto;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
