@@ -1,9 +1,32 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --purple: #800080;
+}
+
 * {
     margin: 0;
 }
 
 *,*:focus,*:hover{
     outline:none;
+}
+
+.background-image {
+
+    z-index: -99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    background-image: url(/www/assets/images/main-background-1.jpg);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navigation-menu {
@@ -15,47 +38,27 @@
     width: 100%;
     height: 70px;
     transition: all .5s;
-    color: white;
+    color: var(--white);
 }
 
-a {
-    /* overwrite bootstrap css */
-    color: white !important;
-    text-decoration: none !important;
-}
-
-.about-me {
-    border-radius: 10px;
-}
-
-.center {
-    justify-content: center;
-}
-
-.d-flex {
-    font-size: x-large;
-    justify-content: space-evenly;
+.container {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
 }
 
 .d-flex div {
     cursor: pointer;
 }
 
+a {
+    /* overwrite bootstrap css */
+    color: var(--white) !important;
+    text-decoration: none !important;
+}
 
 .personal-profile {
     padding-top: 120px;
-    color: white;
-}
-
-.personal-profile-info {
-    position: relative;
-    top: 40px;
-}
-
-.personal-profile-social a {
-    color: white;
-    margin-right: 50px;
-    font-size: 40px;
+    color: var(--white);
 }
 
 .personal-profile img {
@@ -65,67 +68,52 @@ a {
     top: 40px;
 }
 
-.background-image {
-
-    z-index: -99;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
+.personal-profile-info {
+    top: 40px;
 }
 
-.parallax {
-
-    background-color: red;
-    background-image: url(/www/assets/images/main-background-1.jpg);
-
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.personal-profile-contact-list dt {
+    color: var(--white);
 }
 
-.contact-list dt {
-    float: left;
-    color: white;
-}
-
-.contact-list dd {
+.personal-profile-contact-list dd {
     padding-left: 65px;
 }
 
-.contact-list dd a {
-    color: white;
-    text-decoration: none;
+.personal-profile-contact-list dd a {
+    color: var(--white);
 }
 
-.section {
+.personal-profile-social a {
+    color: var(--white);
+    margin-right: 50px;
+}
+
+.center {
+    justify-content: center;
+}
+
+section {
     min-width: 10vw;
-    background-color: white;
+    background-color: var(--white);
     max-width: 100vw;
 
     padding-top: 65px;
     padding-bottom: 60px;
-}
 
-.section-top {
-    
+    border-radius: 15px;
 }
 
 .section-title {
-    margin-bottom: 40px;
     font-size: 36px;
     line-height: 42px;
 }
 
 .button {
-    background-color: purple;
-    color: white;
-
+    background-color: #6d56c1;
+    color: var(--white);
     font-size: large;
     text-decoration: none;
-
     border-radius: 10px;
 }
 
@@ -135,26 +123,17 @@ hr {
     background-color: unset !important;
 }
 
-
 .resume-header {
     margin-bottom: 25px;
     font-size: 36px;
 }
 
 .resume-list-title {
-    color: grey;
+    color: var(--bs-gray);
     font-size: 14px;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 40px;
-}
-
-.col-md-10 {
-    position: relative;
-}
-
-.spacer {
-    height: 50px;
 }
 
 .resume-list-block::before {
@@ -163,7 +142,7 @@ hr {
     border: 2px solid #6d56c1;
     position: absolute;
     content: "";
-    background-color: #fff;
+    background-color: var(--white);
     left: 8px;
 }
 
@@ -198,6 +177,10 @@ hr {
     margin: 0;
 }
 
+.spacer {
+    height: 50px;
+}
+
 .skillset {
     justify-content: space-between;
 }
@@ -228,10 +211,7 @@ hr {
 .contacts {
     padding-left: 15% !important;
     padding-right: 15% !important;
-}
-
-.contact-list {
-    color: white;
+    padding-top: 5%;
 }
 
 .contact-list-title {
@@ -241,34 +221,44 @@ hr {
     font-family: Roboto Mono,monospace;
 }
 
-.contact-list-social ul {
-    list-style: none;
-    padding: 0;
+.space-between {
+    justify-content: space-between;
 }
 
-.contact-list-social ul li {
-    margin-bottom: 15px;
+.contact-list dt {
+    float: left;
+    color: var(--white);
 }
 
-.contact-list-social ul li a {
-    color: white;
+.contact-list dd {
+    padding-left: 65px;
+}
+
+.contact-list dd a {
+    color: var(--white);
     text-decoration: none;
 }
+
 
 .contact-form form button {
     display: block;
     background-color: transparent;
-    border: 1px solid #fff;
-    color: white;
+    border: 2px solid var(--white);
+    color: var(--white);
     margin-left: 50%;
     width: 50%;
+    cursor: pointer;
+}
+
+.contact-form-title {
+    font-size: 1rem;
 }
 
 .contact-form form input {
     width: 100%;
     background-color: transparent;
     border-radius: 3px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     padding: 10px;
     color: #fff;
     font-size: 16px;
@@ -281,7 +271,7 @@ hr {
     width: 100%;
     background-color: transparent;
     border-radius: 3px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     padding: 10px;
     height: 115px;
     color: #fff;
@@ -290,20 +280,39 @@ hr {
     font-family: Roboto Mono,monospace;
 }
 
-footer section p {
+
+.contact-form-social a {
+    color: var(--white);
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+footer p {
+    color: var(--white);
     text-align: center;   
     margin: 10px auto;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
+    color: var(--white);
     opacity: 1; /* Firefox */
-  }
+}
   
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-  }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--white);
+}
   
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
-  }
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--white);
+}
+/*
+@media screen and (max-width: 500px) {
+    .personal-profile {
+        flex-direction: column-reverse;
+    }
+
+    .personal-profile img {
+        width: 80%;
+    }
+}
+*/
