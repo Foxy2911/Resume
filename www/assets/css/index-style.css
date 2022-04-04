@@ -309,14 +309,20 @@ footer p {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: var(--white);
 }
-/*
+
 @media screen and (max-width: 500px) {
+    .navigation-menu div {
+        flex-direction: column !important;
+    }
+    
     .personal-profile {
-        flex-direction: column-reverse;
+        margin-top: 150px !important;
+        flex-direction: column;
     }
 
     .personal-profile img {
+        display: none;
         width: 80%;
+        height: auto;
     }
 }
-*/
