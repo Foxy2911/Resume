@@ -8,8 +8,10 @@
     margin: 0;
 }
 
-*,*:focus,*:hover{
-    outline:none;
+*,
+*:focus,
+*:hover {
+    outline: none;
 }
 
 .background-image {
@@ -168,7 +170,7 @@ hr {
 }
 
 .resume-list-block-year {
-    font-family: Inconsolata,monospace;
+    font-family: Inconsolata, monospace;
     font-size: 14px;
     line-height: 20px;
     color: #999;
@@ -189,11 +191,11 @@ hr {
 }
 
 .skillset-list-title {
-    font-family: Roboto Mono,monospace;
+    font-family: Roboto Mono, monospace;
     letter-spacing: 5px;
     font-weight: 700;
     color: grey;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 40px;
 }
@@ -235,6 +237,229 @@ hr {
     background-color: #6d56c1;
 }
 
+
+.project-list-title {
+    font-family: Roboto Mono, monospace;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: grey;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    margin: 0 auto;
+    width: min-content;
+}
+
+
+/* accordion projecten */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    padding: 18px 24px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid #6d56c1;
+    /* paars uit je palette */
+    border-radius: 12px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(109, 86, 193, 0.15);
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+ background: linear-gradient(135deg, #6d56c1, #5a47b5);
+    color: var(--white);
+    border-color: #5a47b5;
+    box-shadow: 0 6px 14px rgba(109, 86, 193, 0.3);
+}
+
+.accordion:active{
+}
+
+.accordion:after {
+    content: '\02795';
+    /* plus */
+    font-size: 20px;
+    color: #6d56c1;
+    float: right;
+    margin-left: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+
+    padding: 0;
+
+    margin-bottom: 20px;
+}
+
+.panel-inner {
+    background: #f5f5f5; /* light gray */
+    border-left: 2px solid #6d56c1;
+    border-right: 2px solid #6d56c1;
+    border-bottom: 2px solid #6d56c1;
+    border-radius: 0 0 12px 12px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--black);
+    font-size: 16px;
+    padding: 24px;
+    box-shadow: inset 0 1px 0 rgba(109, 86, 193, 0.05);
+
+}
+
+
+.active:after {
+    content: "\2796";
+    /* minus */
+    color: var(--white);
+}
+
+/*carousel*/
+.carousel {
+  position: relative;
+  max-width: 600px; /* or fit your container */
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid #6d56c1;
+  box-shadow: 0 2px 6px rgba(109, 86, 193, 0.3);
+}
+
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  /* hide overflow */
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(109, 86, 193, 0.7);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: #6d56c1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed; /* cover the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8); /* dark translucent bg */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  z-index: 9999;           /* above everything */
+}
+
+/* Lightbox image */
+.lightbox-content {
+  max-width: 90vw;  /* max width 90% viewport */
+  max-height: 90vh; /* max height 90% viewport */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  object-fit: contain; /* scale properly */
+
+}
+
+/* Close button */
+.close {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ddd;
+}
+
+.skills-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  background-color: #6d56c1; /* purple from your palette */
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  user-select: none;
+  cursor: default;
+  box-shadow: 0 2px 5px rgba(109, 86, 193, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.skill-chip:hover {
+  background-color: #5a47b5; /* darker purple on hover */
+}
+
 .contacts {
     padding-left: 15% !important;
     padding-right: 15% !important;
@@ -245,7 +470,7 @@ hr {
     margin-bottom: 40px;
     font-size: 36px;
     line-height: 42px;
-    font-family: Roboto Mono,monospace;
+    font-family: Roboto Mono, monospace;
 }
 
 .space-between {
@@ -290,7 +515,7 @@ hr {
     color: #fff;
     font-size: 16px;
     line-height: 24px;
-    font-family: Roboto Mono,monospace;
+    font-family: Roboto Mono, monospace;
     margin-bottom: 15px;
 }
 
@@ -304,7 +529,7 @@ hr {
     color: #fff;
     font-size: 16px;
     line-height: 24px;
-    font-family: Roboto Mono,monospace;
+    font-family: Roboto Mono, monospace;
 }
 
 
@@ -316,20 +541,24 @@ hr {
 
 footer p {
     color: var(--white);
-    text-align: center;   
+    text-align: center;
     margin: 10px auto;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--white);
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: var(--white);
 }
-  
-::-ms-input-placeholder { /* Microsoft Edge */
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: var(--white);
 }
 
@@ -337,7 +566,7 @@ footer p {
     .navigation-menu div {
         flex-direction: column !important;
     }
-    
+
     .personal-profile {
         margin-top: 150px !important;
         flex-direction: column;

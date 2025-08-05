@@ -6,7 +6,7 @@ function daysBetweenDates(day1, day2) {
 function calculateAge() {
   let ageDiv =  document.getElementById("myAge");
   let yearsOld = daysBetweenDates('Nov 29, 2001 21:00:00', new Date()) / 365;
-  ageDiv.textContent = yearsOld.toFixed(8);
+  ageDiv.textContent = yearsOld.toFixed(5);
 };
 
 setInterval(calculateAge, 1);
